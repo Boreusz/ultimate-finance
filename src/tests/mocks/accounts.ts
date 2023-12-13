@@ -10,13 +10,13 @@ const savingTest: Account = {
   id: "saving-id-001",
   name: "saving-test",
   type: AccountType.SAVING,
-  balance: 12.0,
+  balance: 12.01,
 };
 const creditTest: Account = {
   id: "credit-id-001",
   name: "credit-test",
   type: AccountType.CREDIT_CARD,
-  balance: -12.0,
+  balance: -12.5,
 };
 const testAccounts = [checkingTest, savingTest, creditTest];
 

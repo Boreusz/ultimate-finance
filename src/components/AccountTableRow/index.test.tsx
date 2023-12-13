@@ -13,22 +13,16 @@ test("GIVEN AccountTableRow WHEN there is account passed to display THEN row get
     </Table>
   );
 
-  expect(
-    screen.getByLabelText(`AccountTableRow-${accounts.checkingTest.id}`)
-  ).toBeInTheDocument();
-  expect(
-    screen.getByLabelText(`AccountTableRow-${accounts.checkingTest.id}-Name`)
-  ).toHaveTextContent(accounts.checkingTest.name);
-  expect(
-    screen.getByLabelText(`AccountTableRow-${accounts.checkingTest.id}-Type`)
-  ).toHaveTextContent(accounts.checkingTest.type);
-  expect(
-    screen.getByLabelText(`AccountTableRow-${accounts.checkingTest.id}-Balance`)
-  ).toHaveTextContent(accounts.checkingTest.balance.toString());
-  expect(
-    screen.getByLabelText(`AccountTableRow-${accounts.checkingTest.id}-Actions`)
-  ).toBeInTheDocument();
-  expect(
-    screen.getByLabelText(`AccountTableRow-${accounts.checkingTest.id}-Button`)
-  ).toBeInTheDocument();
+  expect(screen.getByLabelText(`AccountTableRow`)).toBeInTheDocument();
+  expect(screen.getByLabelText(`AccountTableRow-Name`)).toHaveTextContent(
+    accounts.checkingTest.name
+  );
+  expect(screen.getByLabelText(`AccountTableRow-Type`)).toHaveTextContent(
+    accounts.checkingTest.type
+  );
+  expect(screen.getByLabelText(`AccountTableRow-Balance`)).toHaveTextContent(
+    accounts.checkingTest.balance.toString()
+  );
+  expect(screen.getByLabelText(`AccountTableRow-Actions`)).toBeInTheDocument();
+  expect(screen.getByLabelText(`AccountTableRow-Button`)).toBeInTheDocument();
 });

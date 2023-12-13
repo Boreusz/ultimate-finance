@@ -1,5 +1,8 @@
+import AccountTable from "@/components/AccountTable";
+import accounts from "@/tests/mocks/accounts";
+
 const Accounts = () => {
-  return <></>;
+  return <AccountTable accounts={accounts.testAccounts} />;
 };
 
 export default Accounts;
