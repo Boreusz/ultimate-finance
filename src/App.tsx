@@ -1,9 +1,14 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, ThemeConfig, extendTheme } from "@chakra-ui/react";
 import Router from "@/router";
 
 function App() {
+  const config: ThemeConfig = {
+    initialColorMode: "dark", // 'dark' | 'light'
+    useSystemColorMode: true,
+  };
+  const theme = extendTheme({ config });
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Router />
     </ChakraProvider>
   );
