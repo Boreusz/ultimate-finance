@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Dashboard from "../Views/Dashboard";
-import NewEntryForm from "../Views/NewEntryForm";
+import Dashboard from "@views/Dashboard";
+import NewEntry from "@/views/NewEntry";
+import Accounts from "@views/Accounts";
 
 const router = createBrowserRouter([
   {
@@ -9,7 +10,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/new-entry",
-    element: <NewEntryForm />,
+    element: <NewEntry />,
+  },
+  {
+    path: "/accounts",
+    element: <Accounts />,
   },
 ]);
 
